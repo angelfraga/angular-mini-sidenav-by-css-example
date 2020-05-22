@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="opened = !opened">
+    <mat-icon mat-list-icon >menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-sidenav-container >
+  <mat-sidenav [opened]="opened" mode="side" [class.close]="!opened">
+    <mat-nav-list>
+      <mat-list-item>
+        <div class="item">
+          <button mat-icon-button>
+              <mat-icon mat-list-icon >home</mat-icon>
+          </button>
+          <a *ngIf="opened">item one</a>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <div class="item">
+          <button mat-icon-button>
+              <mat-icon mat-list-icon>settings</mat-icon>
+          </button>
+          <a *ngIf="opened">item 2</a>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content [class.close]="!opened">
+    content
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<mat-toolbar color="primary">
+ footer
+</mat-toolbar>
